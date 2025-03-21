@@ -1,0 +1,3 @@
+[submodule "py-gpxindex"]
+	path = py-gpxindex
+	url = git@github.com:of462m/py-gpxindex
