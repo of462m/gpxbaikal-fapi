@@ -1,7 +1,9 @@
 from fastapi import FastAPI
+from gpxindex.index import GPXIndex
 
 app = FastAPI()
+index = GPXIndex("/home/gpxbaikal/gpxbot/mindex")
 
-@app.get("/")
-async def home(tokens: str):
-    return {"data": tokens}
+@app.get("/v1/")
+async def search(tokens: str):
+    return index.search(tokens)
